@@ -28,7 +28,7 @@ public class CreateView extends VerticalLayout implements View {
     private DateTimeField dateTimeField;
     private TextField toAdress;
     private TextField fromAdress;
-    private  MainUI mainUI;
+    private MainUI mainUI;
     private HorizontalLayout form;
     private VerticalLayout contentLayout;
     private TextField name;

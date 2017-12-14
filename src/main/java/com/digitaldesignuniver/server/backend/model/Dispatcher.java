@@ -15,7 +15,7 @@ public class Dispatcher {
     private String name;
     private String login;
     private String password;
-    private Set<Order> orders;
+    private Set<Request> requests;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -59,12 +59,12 @@ public class Dispatcher {
         this.password = password;
     }
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "dispatcher")
-    public Set<Order> getOrders() {
-        return orders;
+    @OneToMany(mappedBy = "dispatcher")
+    public Set<Request> getRequests() {
+        return requests;
     }
 
-    public void setOrders(Set<Order> orders) {
-        this.orders = orders;
+    public void setRequests(Set<Request> requests) {
+        this.requests = requests;
     }
 }

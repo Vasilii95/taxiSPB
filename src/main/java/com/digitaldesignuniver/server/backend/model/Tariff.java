@@ -16,7 +16,8 @@ public class Tariff {
     private String tariffName;
     private BigDecimal price;
     private Set<Car> cars;
-    private Set<Order> orders;
+    private Set<Request> requests;
+    private BigDecimal startPrice;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -44,7 +45,7 @@ public class Tariff {
         this.price = price;
     }
 
-    @OneToMany(mappedBy = "tariff", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "tariff")
     public Set<Car> getCars() {
         return cars;
     }
@@ -53,12 +54,20 @@ public class Tariff {
         this.cars = cars;
     }
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "tariff")
-    public Set<Order> getOrders() {
-        return orders;
+    @OneToMany(mappedBy = "tariff")
+    public Set<Request> getRequests() {
+        return requests;
     }
 
-    public void setOrders(Set<Order> orders) {
-        this.orders = orders;
+    public void setRequests(Set<Request> requests) {
+        this.requests = requests;
+    }
+
+    public BigDecimal getStartPrice() {
+        return startPrice;
+    }
+
+    public void setStartPrice(BigDecimal startPrice) {
+        this.startPrice = startPrice;
     }
 }

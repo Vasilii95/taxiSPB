@@ -1,0 +1,24 @@
+@import "../valo/valo.scss";
+
+
+@mixin myTheme {
+  @include valo;
+
+.valo-menu-item{
+    color: #b0acb1;
+}
+
+  .centeringLayout{
+    background-color: rgba(50, 49, 52, 0.7);
+    border-radius: 10px 10px 10px 10px;
+    color: white;
+  }
+
+  .login-screen {
+    background-image: url(img/background.jpeg);
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 100%;
+    height: 100%;
+  }
+}

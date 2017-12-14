@@ -26,7 +26,6 @@ public class OrderCreator implements Runnable {
         this.driversOnline = driversOnline;
     }
 
-
     @Override
     public void run() {
         while (true) {

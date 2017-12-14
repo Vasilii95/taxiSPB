@@ -1,0 +1,9 @@
+@import "myTheme.scss";
+@import "addons.scss";
+
+$v-layout-margin: $v-layout-margin-top $v-layout-margin-right $v-layout-margin-bottom $v-layout-margin-left !default;
+
+.myTheme {
+  @include addons;
+  @include myTheme;
+}

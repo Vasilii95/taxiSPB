@@ -1,6 +1,7 @@
 package com.digitaldesignuniver.server.backend.repository;
 
-import com.digitaldesignuniver.server.backend.model.*;
+import com.digitaldesignuniver.server.backend.model.Dispatcher;
+import com.digitaldesignuniver.server.backend.model.Request;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

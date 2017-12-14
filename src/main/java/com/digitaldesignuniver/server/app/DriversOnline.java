@@ -14,7 +14,6 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 
-
 /**
  * List of online drivers
  */
@@ -25,7 +24,6 @@ public class DriversOnline {
     private final TaxiServiceImpl taxiService;
     private RequestList requestList;
     private static Logger log = Logger.getLogger(DriversOnline.class.getName());
-
     @Autowired
     public DriversOnline(TaxiServiceImpl taxiService, RequestList requestList) {
         this.taxiService = taxiService;
@@ -148,7 +146,7 @@ public class DriversOnline {
         Driver result = null;
         List<Driver> freeDrivers = drivers.stream()
                 .filter(Driver::getStatus).filter(driver -> driver.getCar().getTariff()
-                        .getTariffName().equals(tariff.getTariffName())).collect(Collectors.toList()); //список автомобилистов готовых принять заказ
+                        .getTariffName().equals(tariff.getTariffName())).collect(Collectors.toList());
         List<Driver> worksDrivers = drivers.stream().filter(driver -> !driver.getStatus()&&driver.getNextOrderId()==null)
                 .filter(driver -> driver.getCar().getTariff().getTariffName().equals(tariff.getTariffName()))
                 .collect(Collectors.toList());

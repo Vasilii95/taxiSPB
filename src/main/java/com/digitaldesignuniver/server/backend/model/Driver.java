@@ -20,6 +20,13 @@ public class Driver {
     private Car car;
     private BigDecimal money;
     private Set<Order> orders;
+    private Boolean status;
+    private String orderId;
+    private String nextOrderId;
+    @Transient
+    private Double longitude;
+    @Transient
+    private Double latitude;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -81,12 +88,56 @@ public class Driver {
         this.money = money;
     }
 
-    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "driver")
+    @ManyToMany(mappedBy = "driver")
     public Set<Order> getOrders() {
         return orders;
     }
 
     public void setOrders(Set<Order> orders) {
         this.orders = orders;
+    }
+
+    public Boolean getStatus() {
+        return status;
+    }
+
+    public void setStatus(Boolean status) {
+        this.status = status;
+    }
+
+    @Transient
+    public Double getLongitude() {
+        return longitude;
+    }
+
+    @Transient
+    public void setLongitude(Double longitude) {
+        this.longitude = longitude;
+    }
+
+    @Transient
+    public Double getLatitude() {
+        return latitude;
+    }
+
+    @Transient
+    public void setLatitude(Double latitude) {
+        this.latitude = latitude;
+    }
+
+    public String getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(String orderId) {
+        this.orderId = orderId;
+    }
+
+    public String getNextOrderId() {
+        return nextOrderId;
+    }
+
+    public void setNextOrderId(String nextOrderId) {
+        this.nextOrderId = nextOrderId;
     }
 }

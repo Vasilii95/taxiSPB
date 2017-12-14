@@ -1,13 +1,18 @@
 package com.digitaldesignuniver.server.UI;
 
-import com.digitaldesignuniver.server.UI.view.*;
+import com.digitaldesignuniver.server.UI.view.CreateView;
+import com.digitaldesignuniver.server.UI.view.ListView;
+import com.digitaldesignuniver.server.UI.view.LoginView;
+import com.digitaldesignuniver.server.UI.view.SearchView;
 import com.digitaldesignuniver.server.UI.view.authentication.BasicAccessControl;
 import com.vaadin.annotations.Push;
 import com.vaadin.annotations.Theme;
 import com.vaadin.navigator.View;
 import com.vaadin.server.*;
 import com.vaadin.spring.annotation.SpringUI;
-import com.vaadin.ui.*;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.CssLayout;
+import com.vaadin.ui.UI;
 import com.vaadin.ui.themes.ValoTheme;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.vaadin.viritin.layouts.MHorizontalLayout;
